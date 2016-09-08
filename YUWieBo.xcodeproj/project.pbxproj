@@ -21,6 +21,7 @@
 		E7EFB4B71D816F9A00FC7FA7 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */; };
 		E7EFB4BA1D816FB100FC7FA7 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B81D816FB100FC7FA7 /* Discover.storyboard */; };
 		E7EFB4BC1D816FC700FC7FA7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4BB1D816FC700FC7FA7 /* Profile.storyboard */; };
+		E7EFB4BF1D81734F00FC7FA7 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4BD1D81734F00FC7FA7 /* Null.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		E7EFB4B91D816FB100FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		E7EFB4BB1D816FC700FC7FA7 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
+		E7EFB4BE1D81734F00FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		E7AA1A031D815C64006B5024 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFB4BD1D81734F00FC7FA7 /* Null.storyboard */,
 				E7AA1A041D815C64006B5024 /* MainVCSettings.json */,
 			);
 			path = Resource;
@@ -212,6 +215,7 @@
 				E7EFB4BC1D816FC700FC7FA7 /* Profile.storyboard in Resources */,
 				E7AA19F31D81367B006B5024 /* Assets.xcassets in Resources */,
 				E7AA1A051D815C64006B5024 /* MainVCSettings.json in Resources */,
+				E7EFB4BF1D81734F00FC7FA7 /* Null.storyboard in Resources */,
 				E7EFB4B71D816F9A00FC7FA7 /* Message.storyboard in Resources */,
 				E7EFB4BA1D816FB100FC7FA7 /* Discover.storyboard in Resources */,
 				E7AA19F11D81367B006B5024 /* Main.storyboard in Resources */,
@@ -269,6 +273,15 @@
 			);
 			name = Discover.storyboard;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		E7EFB4BD1D81734F00FC7FA7 /* Null.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7EFB4BE1D81734F00FC7FA7 /* Base */,
+			);
+			name = Null.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

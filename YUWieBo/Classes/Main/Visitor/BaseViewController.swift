@@ -30,7 +30,7 @@ class BaseViewController: UITableViewController {
 
 extension BaseViewController {
     fileprivate func setupVisitorView() {
-        visitorView.backgroundColor = UIColor.magenta
+        
         self.view = visitorView
     }
 }

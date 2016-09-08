@@ -9,7 +9,37 @@
 import UIKit
 
 class VisitorView: UIView {
+    
+    // MARK:- 通過Xib創建View
     class func createViewFromXib() -> VisitorView{
         return Bundle.main.loadNibNamed("VisitorView", owner: nil, options: nil)!.first as! VisitorView
     }
+    
+    // MARK:- IBOutlet屬性
+    @IBOutlet weak var rotationView: UIImageView!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var tipLabel: UILabel!
+    
+    // MARK:- 自訂函式
+    func setupVisitorView(iconName:String, tipText:String){
+        self.iconView.image = UIImage(named: iconName)
+        self.tipLabel.text = tipText
+        rotationView.isHidden = true
+    }
+    
+    func addRotationAnim() {
+        // 創建動畫
+        let rotationAnim = CABasicAnimation(keyPath: "transform.rotation.z")
+        
+        // 設置動畫屬性
+        rotationAnim.fromValue = 0
+        rotationAnim.toValue = M_PI * 2
+        rotationAnim.repeatCount = MAXFLOAT
+        rotationAnim.duration = 5
+        
+        // 將動畫加到layer中
+        self.rotationView.layer.add(rotationAnim, forKey: nil)
+    }
+    
+    
 }

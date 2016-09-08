@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UITabBarController {
     
-    // MARK:- 延遲加載屬性
+    // MARK:- 延遲加載屬性 
     fileprivate lazy var composeButton : UIButton = UIButton(imageName: "tabbar_compose_icon_add", backgroundName: "tabbar_compose_button")
     
     // MARK:- 系統調用函式

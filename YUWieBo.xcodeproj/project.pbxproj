@@ -17,6 +17,10 @@
 		E7AA1A0B1D815D12006B5024 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0A1D815D12006B5024 /* MessageViewController.swift */; };
 		E7AA1A0D1D815D2E006B5024 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */; };
 		E7AA1A0F1D815D47006B5024 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */; };
+		E7EFB4B51D816F8200FC7FA7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */; };
+		E7EFB4B71D816F9A00FC7FA7 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */; };
+		E7EFB4BA1D816FB100FC7FA7 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B81D816FB100FC7FA7 /* Discover.storyboard */; };
+		E7EFB4BC1D816FC700FC7FA7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4BB1D816FC700FC7FA7 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E7AA1A0A1D815D12006B5024 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E7EFB4B41D816F8200FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
+		E7EFB4B91D816FB100FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		E7EFB4BB1D816FC700FC7FA7 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 		E7AA19FE1D813EE2006B5024 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFB4B81D816FB100FC7FA7 /* Discover.storyboard */,
 				E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */,
 			);
 			path = Discover;
@@ -97,6 +106,7 @@
 		E7AA19FF1D813EE2006B5024 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */,
 				E7AA1A081D815CDB006B5024 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -114,6 +124,7 @@
 		E7AA1A011D813EE2006B5024 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */,
 				E7AA1A0A1D815D12006B5024 /* MessageViewController.swift */,
 			);
 			path = Message;
@@ -122,6 +133,7 @@
 		E7AA1A021D813EE2006B5024 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFB4BB1D816FC700FC7FA7 /* Profile.storyboard */,
 				E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -196,8 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7AA19F61D81367B006B5024 /* LaunchScreen.storyboard in Resources */,
+				E7EFB4B51D816F8200FC7FA7 /* Home.storyboard in Resources */,
+				E7EFB4BC1D816FC700FC7FA7 /* Profile.storyboard in Resources */,
 				E7AA19F31D81367B006B5024 /* Assets.xcassets in Resources */,
 				E7AA1A051D815C64006B5024 /* MainVCSettings.json in Resources */,
+				E7EFB4B71D816F9A00FC7FA7 /* Message.storyboard in Resources */,
+				E7EFB4BA1D816FB100FC7FA7 /* Discover.storyboard in Resources */,
 				E7AA19F11D81367B006B5024 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +251,24 @@
 				E7AA19F51D81367B006B5024 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7EFB4B41D816F8200FC7FA7 /* Base */,
+			);
+			name = Home.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E7EFB4B81D816FB100FC7FA7 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7EFB4B91D816FB100FC7FA7 /* Base */,
+			);
+			name = Discover.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

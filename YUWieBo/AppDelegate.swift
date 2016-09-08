@@ -44,3 +44,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK:- YULog
+/*
+ 1. 添加在 AppDelegate.swift 最下面為全域函式
+ 2. 在TARGETS -> Build Setting 搜尋Swift Flags
+ 3. Debug中添加 -D DEBUG
+ */
+func YULog<T>(messsage : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
+    
+    #if DEBUG
+        
+        let fileName = (file as NSString).lastPathComponent
+        
+        print("文件名:\(fileName)行數:\(lineNum) -『\(messsage)』")
+        
+    #endif
+}
+

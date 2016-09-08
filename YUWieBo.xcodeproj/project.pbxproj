@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E7AA19EC1D81367B006B5024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA19EB1D81367B006B5024 /* AppDelegate.swift */; };
-		E7AA19EE1D81367B006B5024 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA19ED1D81367B006B5024 /* ViewController.swift */; };
 		E7AA19F11D81367B006B5024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AA19EF1D81367B006B5024 /* Main.storyboard */; };
 		E7AA19F31D81367B006B5024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7AA19F21D81367B006B5024 /* Assets.xcassets */; };
 		E7AA19F61D81367B006B5024 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AA19F41D81367B006B5024 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		E7AA19E81D81367B006B5024 /* YUWieBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YUWieBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AA19EB1D81367B006B5024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7AA19ED1D81367B006B5024 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7AA19F01D81367B006B5024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7AA19F21D81367B006B5024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7AA19F51D81367B006B5024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,61 @@
 		E7AA19EA1D81367B006B5024 /* YUWieBo */ = {
 			isa = PBXGroup;
 			children = (
+				E7AA19FD1D813EE2006B5024 /* Classes */,
 				E7AA19EB1D81367B006B5024 /* AppDelegate.swift */,
-				E7AA19ED1D81367B006B5024 /* ViewController.swift */,
 				E7AA19EF1D81367B006B5024 /* Main.storyboard */,
 				E7AA19F21D81367B006B5024 /* Assets.xcassets */,
 				E7AA19F41D81367B006B5024 /* LaunchScreen.storyboard */,
 				E7AA19F71D81367B006B5024 /* Info.plist */,
 			);
 			path = YUWieBo;
+			sourceTree = "<group>";
+		};
+		E7AA19FD1D813EE2006B5024 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA1A001D813EE2006B5024 /* Main */,
+				E7AA19FF1D813EE2006B5024 /* Home */,
+				E7AA1A011D813EE2006B5024 /* Message */,
+				E7AA19FE1D813EE2006B5024 /* Discover */,
+				E7AA1A021D813EE2006B5024 /* Profile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E7AA19FE1D813EE2006B5024 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		E7AA19FF1D813EE2006B5024 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E7AA1A001D813EE2006B5024 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E7AA1A011D813EE2006B5024 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		E7AA1A021D813EE2006B5024 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +182,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7AA19EE1D81367B006B5024 /* ViewController.swift in Sources */,
 				E7AA19EC1D81367B006B5024 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 8QX4385746;
 				INFOPLIST_FILE = YUWieBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -272,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 8QX4385746;
 				INFOPLIST_FILE = YUWieBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -30,6 +30,15 @@ extension MainViewController {
         composeButton.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.height/2)
         // 添加按鈕
         tabBar.addSubview(composeButton)
+        
+        composeButton.addTarget(self, action: #selector(MainViewController.composeBtnClick), for: .touchUpInside)
+    }
+}
+
+// MARK:- 事件監聽
+extension MainViewController {
+    @objc fileprivate func composeBtnClick() {
+        YULog(messsage: "點擊")
     }
 }
 

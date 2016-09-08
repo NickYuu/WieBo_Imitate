@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E74451A81D81C91000262063 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74451A61D81C91000262063 /* BaseViewController.swift */; };
+		E74451A91D81C91000262063 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74451A71D81C91000262063 /* VisitorView.swift */; };
+		E74451AB1D81C92900262063 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74451AA1D81C92900262063 /* VisitorView.xib */; };
 		E74915091D819FEC00231A37 /* UIButton_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74915081D819FEC00231A37 /* UIButton_extension.swift */; };
 		E7AA19EC1D81367B006B5024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA19EB1D81367B006B5024 /* AppDelegate.swift */; };
 		E7AA19F11D81367B006B5024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AA19EF1D81367B006B5024 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E74451A61D81C91000262063 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E74451A71D81C91000262063 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		E74451AA1D81C92900262063 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		E74915081D819FEC00231A37 /* UIButton_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_extension.swift; sourceTree = "<group>"; };
 		E7AA19E81D81367B006B5024 /* YUWieBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YUWieBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AA19EB1D81367B006B5024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E74451A51D81C91000262063 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				E74451A61D81C91000262063 /* BaseViewController.swift */,
+				E74451A71D81C91000262063 /* VisitorView.swift */,
+				E74451AA1D81C92900262063 /* VisitorView.xib */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
 		E74915061D819FAD00231A37 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				E7AA1A031D815C64006B5024 /* Resource */,
+				E74451A51D81C91000262063 /* Visitor */,
 				E7AA1A061D815C9B006B5024 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -230,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7AA19F61D81367B006B5024 /* LaunchScreen.storyboard in Resources */,
+				E74451AB1D81C92900262063 /* VisitorView.xib in Resources */,
 				E7EFB4B51D816F8200FC7FA7 /* Home.storyboard in Resources */,
 				E7EFB4BC1D816FC700FC7FA7 /* Profile.storyboard in Resources */,
 				E7AA19F31D81367B006B5024 /* Assets.xcassets in Resources */,
@@ -253,6 +271,8 @@
 				E7AA1A071D815C9B006B5024 /* MainViewController.swift in Sources */,
 				E7AA1A0B1D815D12006B5024 /* MessageViewController.swift in Sources */,
 				E7AA1A091D815CDB006B5024 /* HomeViewController.swift in Sources */,
+				E74451A81D81C91000262063 /* BaseViewController.swift in Sources */,
+				E74451A91D81C91000262063 /* VisitorView.swift in Sources */,
 				E7AA1A0D1D815D2E006B5024 /* DiscoverViewController.swift in Sources */,
 				E74915091D819FEC00231A37 /* UIButton_extension.swift in Sources */,
 			);

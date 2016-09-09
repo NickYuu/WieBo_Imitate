@@ -21,16 +21,16 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="LBy-JL-wFQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Tw-Bm-Ylc"/>
-                <constraint firstAttribute="bottom" secondItem="LJ5-39-nE0" secondAttribute="bottom" constant="30" id="I7o-ED-fcc"/>
-                <constraint firstAttribute="trailing" secondItem="LJ5-39-nE0" secondAttribute="trailing" constant="30" id="Nnd-ME-Hy7"/>
-                <constraint firstItem="LJ5-39-nE0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="SBP-kW-SCt"/>
+                <constraint firstAttribute="bottom" secondItem="LJ5-39-nE0" secondAttribute="bottom" constant="15" id="C0e-V1-W47"/>
+                <constraint firstItem="LJ5-39-nE0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="N8P-ZO-O2d"/>
+                <constraint firstItem="LJ5-39-nE0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="X5u-xM-bEe"/>
                 <constraint firstAttribute="trailing" secondItem="LBy-JL-wFQ" secondAttribute="trailing" id="elI-U6-UlT"/>
                 <constraint firstAttribute="bottom" secondItem="LBy-JL-wFQ" secondAttribute="bottom" id="fq5-IJ-QlX"/>
                 <constraint firstItem="LBy-JL-wFQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mkM-bk-iQO"/>
-                <constraint firstItem="LJ5-39-nE0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="nQr-Od-vgN"/>
+                <constraint firstAttribute="trailing" secondItem="LJ5-39-nE0" secondAttribute="trailing" constant="15" id="xUT-mA-1SN"/>
             </constraints>
         </view>
     </objects>

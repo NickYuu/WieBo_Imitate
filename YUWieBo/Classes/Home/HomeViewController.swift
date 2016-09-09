@@ -10,8 +10,12 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    // MARK:- 屬性
+    
+    
     // MARK:- 延遲加載屬性
     lazy var titleBtn : TitleButton = TitleButton()
+    lazy var popoverAnimator = PopoverAnimator()
     
     // MARK:- 系統調用函示
     override func viewDidLoad() {
@@ -50,15 +54,25 @@ extension HomeViewController {
 // MARK:- 事件監聽
 extension HomeViewController {
     @objc fileprivate func titleButtonClick(titleBtn:TitleButton) {
+        
         // 改變點擊狀態
         titleBtn.isSelected = !titleBtn.isSelected
         
         // 創建一個彈出視窗
         let vc = PopoverViewController()
         
+        // 推出視窗的樣式
         vc.modalPresentationStyle = .custom
+        
+        // 設置轉場代理
+        vc.transitioningDelegate = popoverAnimator
         
         // 推出視窗 
         present(vc, animated: true, completion: nil)
     }
 }
+
+
+
+
+

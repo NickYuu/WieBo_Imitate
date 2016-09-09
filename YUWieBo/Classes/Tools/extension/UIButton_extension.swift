@@ -32,4 +32,12 @@ extension UIButton {
         self.setBackgroundImage(UIImage(named: backgroundName + "_highlighted"), for: .highlighted)
         self.sizeToFit()
     }
+    
+    convenience init(imageName:String) {
+        self.init()
+        
+        self.setImage(UIImage(named: imageName), for: .normal)
+        self.setImage(UIImage(named: imageName + "_highlighted"), for: .highlighted)
+        self.sizeToFit()
+    }
 }

@@ -20,6 +20,9 @@ class VisitorView: UIView {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
     
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
     // MARK:- 自訂函式
     func setupVisitorView(iconName:String, tipText:String){
         self.iconView.image = UIImage(named: iconName)
@@ -36,6 +39,7 @@ class VisitorView: UIView {
         rotationAnim.toValue = M_PI * 2
         rotationAnim.repeatCount = MAXFLOAT
         rotationAnim.duration = 5
+        rotationAnim.isRemovedOnCompletion = false
         
         // 將動畫加到layer中
         self.rotationView.layer.add(rotationAnim, forKey: nil)

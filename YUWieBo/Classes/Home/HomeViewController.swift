@@ -14,9 +14,10 @@ class HomeViewController: BaseViewController {
     
     
     // MARK:- 延遲加載屬性
-    lazy var titleBtn : TitleButton = TitleButton()
-    lazy var popoverAnimator = PopoverAnimator()
-    
+    fileprivate lazy var titleBtn : TitleButton = TitleButton()
+    fileprivate lazy var popoverAnimator : PopoverAnimator = PopoverAnimator {[weak self] (isPresented) in
+        self?.titleBtn.isSelected = isPresented
+    }
     // MARK:- 系統調用函示
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,9 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     fileprivate func setupNavigationBar() {
         
+        // 螢幕尺寸
+        let screenSize =  UIScreen.main.bounds
+        
         // 左邊BarButton
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention")
         
@@ -47,6 +51,9 @@ extension HomeViewController {
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleButtonClick(titleBtn:)), for: .touchUpInside)
         navigationItem.titleView = titleBtn
         
+        // 彈出視窗的尺寸
+        popoverAnimator.presentedFrame = CGRect(x: screenSize.width*0.5 - screenSize.width*0.48/2, y: 55, width: screenSize.width*0.48, height: screenSize.height*0.38)
+        
     }
 }
 
@@ -56,7 +63,7 @@ extension HomeViewController {
     @objc fileprivate func titleButtonClick(titleBtn:TitleButton) {
         
         // 改變點擊狀態
-        titleBtn.isSelected = !titleBtn.isSelected
+        //titleBtn.isSelected = !titleBtn.isSelected
         
         // 創建一個彈出視窗
         let vc = PopoverViewController()

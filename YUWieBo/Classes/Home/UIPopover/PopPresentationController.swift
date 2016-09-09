@@ -10,17 +10,17 @@ import UIKit
 
 class PopPresentationController: UIPresentationController {
     
+    // MARK:- 對外公開的屬性
+    var presentedFrame : CGRect = CGRect.zero
+    
     // MARK:- 延遲加載屬性
     fileprivate lazy var coverView = UIView()
     
-    /// MARK:- 系統調用函示
+    /// MARK:- 系統調用方法
     override func containerViewWillLayoutSubviews() {
         
-        // 螢幕尺寸
-        let screenSize =  UIScreen.main.bounds
-        
         // 設置POP尺寸位置
-        presentedView?.frame = CGRect(x: screenSize.width*0.5 - screenSize.width*0.45/2, y: 55, width: screenSize.width*0.45, height: screenSize.height*0.3)
+        presentedView?.frame = presentedFrame
 
         // 添加一個霧化背景
         setupCoverView()

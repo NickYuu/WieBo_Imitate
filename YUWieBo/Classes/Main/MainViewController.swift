@@ -38,7 +38,7 @@ extension MainViewController {
 // MARK:- 事件監聽
 extension MainViewController {
     @objc fileprivate func composeBtnClick() {
-        YULog(messsage: "點擊")
+        YULog("點擊")
         
     }
 }

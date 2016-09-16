@@ -35,7 +35,7 @@ extension PopPresentationController {
         // 添加一個霧化背景
         containerView?.insertSubview(coverView, at: 0)
         coverView.backgroundColor = UIColor(white: 0.8, alpha: 0.5)
-        coverView.frame = containerView!.bounds
+        coverView.frame = containerView?.bounds ?? CGRect.zero
         
         // 給霧化背景添加點擊手勢
         let tapGes = UITapGestureRecognizer(target: self, action: #selector(PopPresentationController.tapRecognizer))

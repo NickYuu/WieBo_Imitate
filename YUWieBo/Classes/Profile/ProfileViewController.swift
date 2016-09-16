@@ -13,7 +13,7 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        visitorView.setupVisitorView(iconName: "visitordiscover_image_profile", tipText: "登入後..............")
+        visitorView.setupVisitorView("visitordiscover_image_profile", tipText: "登入後..............")
     }
 
 }

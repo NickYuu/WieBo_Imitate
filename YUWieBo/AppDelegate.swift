@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         UITabBar.appearance().tintColor = #colorLiteral(red: 1, green: 0.5106488466, blue: 0.002952917945, alpha: 1)
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
         
         return true
     }
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  2. 在TARGETS -> Build Setting 搜尋Swift Flags
  3. Debug中添加 -D DEBUG
  */
-func YULog<T>(messsage : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
+func YULog<T>(_ messsage : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
     
     #if DEBUG
         

@@ -9,4 +9,6 @@ target 'YUWieBo' do
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
+pod 'SnapKit'
+
 end

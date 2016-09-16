@@ -12,7 +12,7 @@ class MessageViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        visitorView.setupVisitorView(iconName: "visitordiscover_image_message", tipText: "登入後..............")
+        visitorView.setupVisitorView("visitordiscover_image_message", tipText: "登入後..............")
     }
 
 }

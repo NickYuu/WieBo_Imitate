@@ -18,7 +18,7 @@ class HomeViewController: BaseViewController {
     fileprivate lazy var popoverAnimator : PopoverAnimator = PopoverAnimator {[weak self] (isPresented) in
         self?.titleBtn.isSelected = isPresented
     }
-    // MARK:- 系統調用函示
+    // MARK:- 系統調用函式
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,7 +48,7 @@ extension HomeViewController {
         
         // 中間titleView
         titleBtn.setTitle("ＹＵ", for: .normal)
-        titleBtn.addTarget(self, action: #selector(HomeViewController.titleButtonClick(titleBtn:)), for: .touchUpInside)
+        titleBtn.addTarget(self, action: #selector(HomeViewController.titleButtonClick(_:)), for: .touchUpInside)
         navigationItem.titleView = titleBtn
         
         // 彈出視窗的尺寸
@@ -60,7 +60,7 @@ extension HomeViewController {
 
 // MARK:- 事件監聽
 extension HomeViewController {
-    @objc fileprivate func titleButtonClick(titleBtn:TitleButton) {
+    @objc fileprivate func titleButtonClick(_ titleBtn:TitleButton) {
         
         // 改變點擊狀態
         //titleBtn.isSelected = !titleBtn.isSelected

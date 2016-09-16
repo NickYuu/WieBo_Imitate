@@ -43,7 +43,7 @@ extension PopoverAnimator : UIViewControllerTransitioningDelegate {
         return self
     }
     
-    // 自定義消失的動畫
+    /// 自定義消失的動畫
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         isPresented = false

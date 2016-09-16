@@ -14,7 +14,7 @@ class BaseViewController: UITableViewController {
     lazy var visitorView = VisitorView.createViewFromXib()
     
     // MARK:- 定義變量
-    var isLogin = true
+    var isLogin = false
     
     // MARK:- 系統自調函式
     override func loadView() {
@@ -34,26 +34,33 @@ extension BaseViewController {
     /// 未登入視圖
     fileprivate func setupVisitorView() {
         self.view = visitorView
-        visitorView.registerButton.addTarget(self, action: #selector(BaseViewController.letBarButtonClick), for: .touchUpInside)
-        visitorView.loginButton.addTarget(self, action: #selector(BaseViewController.rightBarButtonClick), for: .touchUpInside)
+        visitorView.registerButton.addTarget(self, action: #selector(BaseViewController.registerBtnClick), for: .touchUpInside)
+        visitorView.loginButton.addTarget(self, action: #selector(BaseViewController.loginBtnClick), for: .touchUpInside)
     }
     
     /// 設置NavigetionItems
     fileprivate func setupNavigetionItems() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "註冊", style: .plain, target: self, action: #selector(BaseViewController.letBarButtonClick))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登入", style: .plain, target: self, action: #selector(BaseViewController.rightBarButtonClick))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "註冊", style: .plain, target: self, action: #selector(BaseViewController.registerBtnClick))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登入", style: .plain, target: self, action: #selector(BaseViewController.loginBtnClick))
     }
     
 }
 
 // MARK:- 事件監聽
 extension BaseViewController {
-    @objc fileprivate func letBarButtonClick() {
-        YULog(messsage: "letBarButtonClick")
+    @objc fileprivate func registerBtnClick() {
+        YULog("registerBtnClick")
     }
     
-    @objc fileprivate func rightBarButtonClick() {
-        YULog(messsage: "rightBarButtonClick")
+    @objc fileprivate func loginBtnClick() {
+        // 創建OAuthViewController
+        let oAuthVC = OAuthViewController()
+        
+        // 添加UINavigationController
+        let oAuthNav = UINavigationController(rootViewController: oAuthVC)
+        
+        // 彈出Controller
+        present(oAuthNav, animated: true, completion: nil)
     }
     
 }

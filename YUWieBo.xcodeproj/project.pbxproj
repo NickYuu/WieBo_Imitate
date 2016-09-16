@@ -32,6 +32,7 @@
 		E7AA1A0D1D815D2E006B5024 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */; };
 		E7AA1A0F1D815D47006B5024 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */; };
 		E7D0C0C51D8C062900B9C3DC /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D0C0C41D8C062900B9C3DC /* NetworkTools.swift */; };
+		E7D0C0C71D8C17CD00B9C3DC /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D0C0C61D8C17CD00B9C3DC /* UserAccount.swift */; };
 		E7EFB4B51D816F8200FC7FA7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */; };
 		E7EFB4B71D816F9A00FC7FA7 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */; };
 		E7EFB4BA1D816FB100FC7FA7 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B81D816FB100FC7FA7 /* Discover.storyboard */; };
@@ -69,6 +70,7 @@
 		E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E7D0C0C41D8C062900B9C3DC /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		E7D0C0C61D8C17CD00B9C3DC /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		E7EFB4B41D816F8200FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		E7EFB4B61D816F9A00FC7FA7 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		E7EFB4B91D816FB100FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
@@ -149,8 +151,9 @@
 		E77FB0781D8BB31B00D60DAA /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				E77FB0791D8BB37700D60DAA /* OAuthViewController.swift */,
 				E77FB07A1D8BB37700D60DAA /* OAuthViewController.xib */,
+				E77FB0791D8BB37700D60DAA /* OAuthViewController.swift */,
+				E7D0C0C61D8C17CD00B9C3DC /* UserAccount.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			files = (
 				E77FB07E1D8BCB9300D60DAA /* Common.swift in Sources */,
 				E7D0C0C51D8C062900B9C3DC /* NetworkTools.swift in Sources */,
+				E7D0C0C71D8C17CD00B9C3DC /* UserAccount.swift in Sources */,
 				E7AA1A0F1D815D47006B5024 /* ProfileViewController.swift in Sources */,
 				E7AA19EC1D81367B006B5024 /* AppDelegate.swift in Sources */,
 				E71A1F011D8213BE00F2A520 /* UIBarButtonItem_Extension.swift in Sources */,

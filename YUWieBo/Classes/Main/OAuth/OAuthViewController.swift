@@ -57,7 +57,7 @@ extension OAuthViewController {
     
     @objc fileprivate func fillItemClick() {
         // 撰寫JS
-        let jsCode = "document.getElementById('userId').value='00886926838881';document.getElementById('passwd').value='ws875421';"
+        let jsCode = "document.getElementById('userId').value='00886926838881';document.getElementById('passwd').value='';"
         
         // webView執行JS
         webView.stringByEvaluatingJavaScript(from: jsCode)
@@ -114,8 +114,52 @@ extension OAuthViewController {
                 YULog(error)
                 return
             }
+            // 拿到結果
+            guard let accountDict = result else {
+                YULog("沒有獲取授權後的數據")
+                return
+            }
             
-            YULog(result)
+            // 將字典用一個類別保存
+            let account = UserAccount(dict: accountDict)
+            
+            
+            // 請求用戶資訊
+            self.loadUserInfo(account: account)
+        }
+    }
+    
+    
+    /// 請求用戶資訊
+    fileprivate func loadUserInfo(account : UserAccount) {
+        // 獲取AccessToken
+        guard let accessToken = account.access_token else {
+            return
+        }
+        
+        // 獲取uid
+        guard let uid = account.uid else {
+            return
+        }
+        
+        // 發送網路請求
+        NetworkTools.shareInstance.loadUserInfo(access_token: accessToken, uid: uid) { (result, error) -> () in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            // 請求用戶資訊的結果
+            guard let userInfoDict = result else {
+                return
+            }
+            
+            // 取得暱稱及頭像
+            account.screen_name = userInfoDict["screen_name"] as? String
+            account.avatar_large = userInfoDict["avatar_large"] as? String
+            
+            YULog(account)
         }
     }
 }

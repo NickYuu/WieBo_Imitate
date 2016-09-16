@@ -64,4 +64,20 @@ extension NetworkTools {
 }
 
 
+// MARK:- 請求用戶資訊
+extension NetworkTools {
+    func loadUserInfo(access_token : String, uid : String, finished : @escaping (_ result : [String : AnyObject]?, _ error : NSError?) -> ()) {
+        // 獲取請求的URLString
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        // 獲取請求的參數
+        let parameters = ["access_token" : access_token, "uid" : uid]
+        
+        // 發送網路請求
+        request(methodType: .get, URLString: urlString, parameters: parameters as [String : AnyObject]?) { (result, error) -> () in
+            finished(result as? [String : AnyObject] , error as NSError?)
+        }
+    }
+}
+
 

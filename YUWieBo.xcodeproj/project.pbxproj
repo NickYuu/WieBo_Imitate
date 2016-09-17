@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3ACB7E8B46105CE94B60AB2F /* Pods_YUWieBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C25C1C43DEB23186D003622 /* Pods_YUWieBo.framework */; };
+		E705AA4D1D8D560600506682 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705AA4C1D8D560600506682 /* UserAccountViewModel.swift */; };
+		E705AA511D8D5D1900506682 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705AA4F1D8D5D1900506682 /* WelcomeViewController.swift */; };
+		E705AA521D8D5D1900506682 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E705AA501D8D5D1900506682 /* WelcomeViewController.xib */; };
 		E71A1F011D8213BE00F2A520 /* UIBarButtonItem_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F001D8213BE00F2A520 /* UIBarButtonItem_Extension.swift */; };
 		E71A1F031D829F5400F2A520 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F021D829F5400F2A520 /* TitleButton.swift */; };
 		E71A1F071D82B13A00F2A520 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F051D82B13A00F2A520 /* PopoverViewController.swift */; };
@@ -44,6 +47,9 @@
 		6D117DFF23E84EA95E56CE54 /* Pods-YUWieBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YUWieBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YUWieBo/Pods-YUWieBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9C25C1C43DEB23186D003622 /* Pods_YUWieBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YUWieBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41C7DF8D13B8D957B9DDF87 /* Pods-YUWieBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YUWieBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YUWieBo/Pods-YUWieBo.release.xcconfig"; sourceTree = "<group>"; };
+		E705AA4C1D8D560600506682 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		E705AA4F1D8D5D1900506682 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E705AA501D8D5D1900506682 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		E71A1F001D8213BE00F2A520 /* UIBarButtonItem_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem_Extension.swift; sourceTree = "<group>"; };
 		E71A1F021D829F5400F2A520 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		E71A1F051D82B13A00F2A520 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E705AA4E1D8D5CFC00506682 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E705AA501D8D5D1900506682 /* WelcomeViewController.xib */,
+				E705AA4F1D8D5D1900506682 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		E71A1F041D82B0B900F2A520 /* UIPopover */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +169,7 @@
 				E77FB07A1D8BB37700D60DAA /* OAuthViewController.xib */,
 				E77FB0791D8BB37700D60DAA /* OAuthViewController.swift */,
 				E7D0C0C61D8C17CD00B9C3DC /* UserAccount.swift */,
+				E705AA4C1D8D560600506682 /* UserAccountViewModel.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -224,6 +240,7 @@
 		E7AA1A001D813EE2006B5024 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E705AA4E1D8D5CFC00506682 /* Welcome */,
 				E77FB0781D8BB31B00D60DAA /* OAuth */,
 				E7AA1A031D815C64006B5024 /* Resource */,
 				E74451A51D81C91000262063 /* Visitor */,
@@ -326,6 +343,7 @@
 				E7AA19F61D81367B006B5024 /* LaunchScreen.storyboard in Resources */,
 				E74451AB1D81C92900262063 /* VisitorView.xib in Resources */,
 				E7EFB4B51D816F8200FC7FA7 /* Home.storyboard in Resources */,
+				E705AA521D8D5D1900506682 /* WelcomeViewController.xib in Resources */,
 				E7EFB4BC1D816FC700FC7FA7 /* Profile.storyboard in Resources */,
 				E77FB07C1D8BB37700D60DAA /* OAuthViewController.xib in Resources */,
 				E7AA19F31D81367B006B5024 /* Assets.xcassets in Resources */,
@@ -394,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77FB07E1D8BCB9300D60DAA /* Common.swift in Sources */,
+				E705AA511D8D5D1900506682 /* WelcomeViewController.swift in Sources */,
 				E7D0C0C51D8C062900B9C3DC /* NetworkTools.swift in Sources */,
 				E7D0C0C71D8C17CD00B9C3DC /* UserAccount.swift in Sources */,
 				E7AA1A0F1D815D47006B5024 /* ProfileViewController.swift in Sources */,
@@ -406,6 +425,7 @@
 				E7AA1A0B1D815D12006B5024 /* MessageViewController.swift in Sources */,
 				E71A1F0A1D82DBCF00F2A520 /* PopPresentationController.swift in Sources */,
 				E71A1F0C1D8318D700F2A520 /* PopoverAnimator.swift in Sources */,
+				E705AA4D1D8D560600506682 /* UserAccountViewModel.swift in Sources */,
 				E7AA1A091D815CDB006B5024 /* HomeViewController.swift in Sources */,
 				E74451A81D81C91000262063 /* BaseViewController.swift in Sources */,
 				E74451A91D81C91000262063 /* VisitorView.swift in Sources */,
@@ -560,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D117DFF23E84EA95E56CE54 /* Pods-YUWieBo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 8QX4385746;
@@ -576,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B41C7DF8D13B8D957B9DDF87 /* Pods-YUWieBo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 8QX4385746;

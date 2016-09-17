@@ -57,7 +57,7 @@ extension OAuthViewController {
     
     @objc fileprivate func fillItemClick() {
         // 撰寫JS
-        let jsCode = "document.getElementById('userId').value='00886926838881';document.getElementById('passwd').value='';"
+        let jsCode = "document.getElementById('userId').value='00886926838881';document.getElementById('passwd').value='ws87542';"
         
         // webView執行JS
         webView.stringByEvaluatingJavaScript(from: jsCode)
@@ -159,7 +159,16 @@ extension OAuthViewController {
             account.screen_name = userInfoDict["screen_name"] as? String
             account.avatar_large = userInfoDict["avatar_large"] as? String
             
-            YULog(account)
+            // 將account物件保存
+            NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountViewModel.shareIntance.accountPath)
+            
+            // 5.将account对象设置到单例对象中
+            UserAccountViewModel.shareIntance.account = account
+            
+            // 6.退出当前控制器
+            self.dismiss(animated: false, completion: { () -> Void in
+                UIApplication.shared.keyWindow?.rootViewController = WelcomeViewController()
+            })
         }
     }
 }

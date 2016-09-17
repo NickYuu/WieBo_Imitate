@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="YUWieBo" customModuleProvider="target">
+            <connections>
+                <outlet property="iconView" destination="xvt-4v-tQZ" id="hf9-0h-kZs"/>
+                <outlet property="iconViewBottomCons" destination="1m0-Ji-sxp" id="gHz-rl-crK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="Hh2-Gm-twA"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="xvt-4v-tQZ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="hlc-jJ-IAf"/>
+                        <constraint firstAttribute="width" constant="100" id="zIJ-GO-WU6"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歡迎回來" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whM-nk-BPL">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Hh2-Gm-twA" firstAttribute="bottom" secondItem="xvt-4v-tQZ" secondAttribute="bottom" constant="150" id="1m0-Ji-sxp"/>
+                <constraint firstItem="whM-nk-BPL" firstAttribute="centerX" secondItem="xvt-4v-tQZ" secondAttribute="centerX" id="34E-Av-noi"/>
+                <constraint firstAttribute="bottom" secondItem="Hh2-Gm-twA" secondAttribute="bottom" id="Eq0-Ft-Y8G"/>
+                <constraint firstItem="Hh2-Gm-twA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Fqc-mI-pka"/>
+                <constraint firstItem="whM-nk-BPL" firstAttribute="top" secondItem="xvt-4v-tQZ" secondAttribute="bottom" constant="20" id="X97-lB-neg"/>
+                <constraint firstAttribute="trailing" secondItem="Hh2-Gm-twA" secondAttribute="trailing" id="fns-1h-JhX"/>
+                <constraint firstItem="Hh2-Gm-twA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uhg-ht-5Yd"/>
+                <constraint firstItem="xvt-4v-tQZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yEE-3q-W90"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ad_background" width="375" height="667"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>

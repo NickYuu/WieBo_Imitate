@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserAccount: NSObject {
+class UserAccount: NSObject, NSCoding {
     
     // MARK:- 屬性
     /// 授權AccessToken
@@ -23,13 +23,13 @@ class UserAccount: NSObject {
     /// 用戶ID
     var uid : String?
     
-    /// 过期日期
+    /// 過期日期 利用expires_in取得
     var expires_date : NSDate?
     
-    /// 昵称
+    /// 暱稱
     var screen_name : String?
     
-    /// 用户的头像地址
+    /// 照片的網址
     var avatar_large : String?
     
     // MARK:- 自定構造函式
@@ -47,5 +47,24 @@ class UserAccount: NSObject {
         
         return dictionaryWithValues(forKeys: ["access_token", "expires_date", "uid", "screen_name", "avatar_large"]).description
         
+    }
+    
+    // MARK:- 讀檔＆寫檔
+    /// 讀檔的方法
+    required init?(coder aDecoder: NSCoder) {
+        access_token = aDecoder.decodeObject(forKey: "access_token") as? String
+        uid = aDecoder.decodeObject(forKey: "uid") as? String
+        expires_date = aDecoder.decodeObject(forKey: "expires_date") as? NSDate
+        avatar_large = aDecoder.decodeObject(forKey: "avatar_large") as? String
+        screen_name = aDecoder.decodeObject(forKey: "screen_name") as? String
+    }
+    
+    /// 寫檔方法
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(access_token, forKey: "access_token")
+        aCoder.encode(uid, forKey: "uid")
+        aCoder.encode(expires_date, forKey: "expires_date")
+        aCoder.encode(avatar_large, forKey: "avatar_large")
+        aCoder.encode(screen_name, forKey: "screen_name")
     }
 }

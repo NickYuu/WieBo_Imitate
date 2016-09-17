@@ -14,10 +14,11 @@ class BaseViewController: UITableViewController {
     lazy var visitorView = VisitorView.createViewFromXib()
     
     // MARK:- 定義變量
-    var isLogin = false
+    var isLogin : Bool = UserAccountViewModel.shareIntance.isLogin
     
-    // MARK:- 系統自調函式
+    // MARK:- 系統回調函式
     override func loadView() {
+        // 判斷要加載哪一個View
         isLogin ? super.loadView() : setupVisitorView()
     }
     

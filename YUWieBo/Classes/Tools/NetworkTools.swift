@@ -46,7 +46,6 @@ extension NetworkTools {
     
 }
 
-
 // MARK:- 請求AccessToken
 extension NetworkTools {
     func loadAccessToken(code : String, finished : @escaping (_ result : [String : AnyObject]?, _ error : NSError?) -> ()) {
@@ -63,7 +62,6 @@ extension NetworkTools {
     }
 }
 
-
 // MARK:- 請求用戶資訊
 extension NetworkTools {
     func loadUserInfo(access_token : String, uid : String, finished : @escaping (_ result : [String : AnyObject]?, _ error : NSError?) -> ()) {
@@ -76,6 +74,26 @@ extension NetworkTools {
         // 發送網路請求
         request(methodType: .get, URLString: urlString, parameters: parameters as [String : AnyObject]?) { (result, error) -> () in
             finished(result as? [String : AnyObject] , error as NSError?)
+        }
+    }
+}
+
+// MARK:- 請求首頁數據
+extension NetworkTools {
+    func loadStatuses(finished: @escaping (_ result:[[String:AnyObject]]?, _ err:Error?) -> ()) {
+        
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        
+        let parameters = ["access_token":(UserAccountViewModel.shareIntance.account?.access_token)!]
+                
+        request(methodType: .get, URLString: urlString, parameters: parameters as [String : AnyObject]?) { (result, err) in
+            
+            guard let resultDic = result as? [String : AnyObject] else {
+                finished(nil, err)
+                return
+            }
+            
+            finished(resultDic["statuses"] as? [[String : AnyObject]],err)
         }
     }
 }

@@ -12,12 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var defaultViewController : UIViewController? {
+        let isLogin = UserAccountViewModel.shareIntance.isLogin
+        return isLogin ? WelcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        // 設置全局UITabBar、UINavigationBar顏色
         UITabBar.appearance().tintColor = #colorLiteral(red: 1, green: 0.5106488466, blue: 0.002952917945, alpha: 1)
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+        
+        // 創建window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = defaultViewController
+        window?.makeKeyAndVisible()
         
         return true
     }

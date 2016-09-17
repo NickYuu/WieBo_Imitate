@@ -30,6 +30,9 @@ class HomeViewController: BaseViewController {
         
         // 有登入
         setupNavigationBar()
+        
+        // 請求數據
+        loadStatuses()
     }
 }
 
@@ -47,7 +50,7 @@ extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop")
         
         // 中間titleView
-        titleBtn.setTitle("ＹＵ", for: .normal)
+        titleBtn.setTitle("DeveloperYU", for: .normal)
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleButtonClick(_:)), for: .touchUpInside)
         navigationItem.titleView = titleBtn
         
@@ -56,7 +59,6 @@ extension HomeViewController {
         
     }
 }
-
 
 // MARK:- 事件監聽
 extension HomeViewController {
@@ -79,7 +81,24 @@ extension HomeViewController {
     }
 }
 
-
+// MARK:- 加載首頁數據
+extension HomeViewController {
+    fileprivate func loadStatuses() {
+        NetworkTools.shareInstance.loadStatuses { (result, err) in
+            if err != nil {
+                YULog(err)
+                return
+            }
+            guard let resultArray = result else {
+                return
+            }
+            for statusDic in resultArray {
+                YULog(statusDic)
+            }
+            
+        }
+    }
+}
 
 
 

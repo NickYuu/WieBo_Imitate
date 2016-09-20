@@ -11,6 +11,10 @@
 		E705AA4D1D8D560600506682 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705AA4C1D8D560600506682 /* UserAccountViewModel.swift */; };
 		E705AA511D8D5D1900506682 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705AA4F1D8D5D1900506682 /* WelcomeViewController.swift */; };
 		E705AA521D8D5D1900506682 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E705AA501D8D5D1900506682 /* WelcomeViewController.xib */; };
+		E71445481D8E6B3D00DB2635 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71445471D8E6B3D00DB2635 /* NSDate-Extension.swift */; };
+		E714454A1D8E792600DB2635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71445491D8E792600DB2635 /* User.swift */; };
+		E714454C1D8EB33C00DB2635 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714454B1D8EB33C00DB2635 /* StatusViewModel.swift */; };
+		E714454E1D8EBEE500DB2635 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714454D1D8EBEE500DB2635 /* HomeViewCell.swift */; };
 		E71A1F011D8213BE00F2A520 /* UIBarButtonItem_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F001D8213BE00F2A520 /* UIBarButtonItem_Extension.swift */; };
 		E71A1F031D829F5400F2A520 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F021D829F5400F2A520 /* TitleButton.swift */; };
 		E71A1F071D82B13A00F2A520 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F051D82B13A00F2A520 /* PopoverViewController.swift */; };
@@ -34,6 +38,7 @@
 		E7AA1A0B1D815D12006B5024 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0A1D815D12006B5024 /* MessageViewController.swift */; };
 		E7AA1A0D1D815D2E006B5024 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */; };
 		E7AA1A0F1D815D47006B5024 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */; };
+		E7C793AB1D8E300A00A93374 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C793AA1D8E300A00A93374 /* Status.swift */; };
 		E7D0C0C51D8C062900B9C3DC /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D0C0C41D8C062900B9C3DC /* NetworkTools.swift */; };
 		E7D0C0C71D8C17CD00B9C3DC /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D0C0C61D8C17CD00B9C3DC /* UserAccount.swift */; };
 		E7EFB4B51D816F8200FC7FA7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */; };
@@ -50,6 +55,10 @@
 		E705AA4C1D8D560600506682 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		E705AA4F1D8D5D1900506682 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E705AA501D8D5D1900506682 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		E71445471D8E6B3D00DB2635 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		E71445491D8E792600DB2635 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E714454B1D8EB33C00DB2635 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		E714454D1D8EBEE500DB2635 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		E71A1F001D8213BE00F2A520 /* UIBarButtonItem_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem_Extension.swift; sourceTree = "<group>"; };
 		E71A1F021D829F5400F2A520 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		E71A1F051D82B13A00F2A520 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +84,7 @@
 		E7AA1A0A1D815D12006B5024 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E7AA1A0C1D815D2E006B5024 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		E7AA1A0E1D815D47006B5024 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E7C793AA1D8E300A00A93374 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		E7D0C0C41D8C062900B9C3DC /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		E7D0C0C61D8C17CD00B9C3DC /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		E7EFB4B41D816F8200FC7FA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -159,8 +169,19 @@
 			children = (
 				E74915081D819FEC00231A37 /* UIButton_extension.swift */,
 				E71A1F001D8213BE00F2A520 /* UIBarButtonItem_Extension.swift */,
+				E71445471D8E6B3D00DB2635 /* NSDate-Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		E74A0E791D8E147800FF4131 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7C793AA1D8E300A00A93374 /* Status.swift */,
+				E71445491D8E792600DB2635 /* User.swift */,
+				E714454B1D8EB33C00DB2635 /* StatusViewModel.swift */,
+			);
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		E77FB0781D8BB31B00D60DAA /* OAuth */ = {
@@ -230,9 +251,11 @@
 		E7AA19FF1D813EE2006B5024 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E74A0E791D8E147800FF4131 /* HomeModel */,
 				E71A1F041D82B0B900F2A520 /* UIPopover */,
 				E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */,
 				E7AA1A081D815CDB006B5024 /* HomeViewController.swift */,
+				E714454D1D8EBEE500DB2635 /* HomeViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -413,6 +436,7 @@
 			files = (
 				E77FB07E1D8BCB9300D60DAA /* Common.swift in Sources */,
 				E705AA511D8D5D1900506682 /* WelcomeViewController.swift in Sources */,
+				E7C793AB1D8E300A00A93374 /* Status.swift in Sources */,
 				E7D0C0C51D8C062900B9C3DC /* NetworkTools.swift in Sources */,
 				E7D0C0C71D8C17CD00B9C3DC /* UserAccount.swift in Sources */,
 				E7AA1A0F1D815D47006B5024 /* ProfileViewController.swift in Sources */,
@@ -422,15 +446,19 @@
 				E77FB07B1D8BB37700D60DAA /* OAuthViewController.swift in Sources */,
 				E71A1F071D82B13A00F2A520 /* PopoverViewController.swift in Sources */,
 				E71A1F031D829F5400F2A520 /* TitleButton.swift in Sources */,
+				E71445481D8E6B3D00DB2635 /* NSDate-Extension.swift in Sources */,
 				E7AA1A0B1D815D12006B5024 /* MessageViewController.swift in Sources */,
 				E71A1F0A1D82DBCF00F2A520 /* PopPresentationController.swift in Sources */,
 				E71A1F0C1D8318D700F2A520 /* PopoverAnimator.swift in Sources */,
+				E714454C1D8EB33C00DB2635 /* StatusViewModel.swift in Sources */,
+				E714454E1D8EBEE500DB2635 /* HomeViewCell.swift in Sources */,
 				E705AA4D1D8D560600506682 /* UserAccountViewModel.swift in Sources */,
 				E7AA1A091D815CDB006B5024 /* HomeViewController.swift in Sources */,
 				E74451A81D81C91000262063 /* BaseViewController.swift in Sources */,
 				E74451A91D81C91000262063 /* VisitorView.swift in Sources */,
 				E7AA1A0D1D815D2E006B5024 /* DiscoverViewController.swift in Sources */,
 				E74915091D819FEC00231A37 /* UIButton_extension.swift in Sources */,
+				E714454A1D8E792600DB2635 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

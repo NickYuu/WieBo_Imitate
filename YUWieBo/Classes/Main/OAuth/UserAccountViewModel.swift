@@ -11,13 +11,13 @@ import UIKit
 
 class UserAccountViewModel {
     
-    // MARK:- 将类设计成单例
+    // MARK:- 設置單例
     static let shareIntance : UserAccountViewModel = UserAccountViewModel()
     
-    // MARK:- 定义属性
+    // MARK:- 屬性
     var account : UserAccount?
     
-    // MARK:- 计算属性
+    // MARK:- 計算屬性
     var accountPath : String {
         var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         accountPath += "/accout.plist"
@@ -37,7 +37,7 @@ class UserAccountViewModel {
         return expiresDate.compare(Date()) == ComparisonResult.orderedDescending
     }
     
-    // MARK:- 重写init()函数
+    // MARK:- 重寫init()
     init () {
         // 1.从沙盒中读取中归档的信息
         account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount

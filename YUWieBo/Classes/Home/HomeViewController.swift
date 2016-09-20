@@ -18,6 +18,8 @@ class HomeViewController: BaseViewController {
     fileprivate lazy var popoverAnimator : PopoverAnimator = PopoverAnimator {[weak self] (isPresented) in
         self?.titleBtn.isSelected = isPresented
     }
+    fileprivate lazy var viewModels : [StatusViewModel] = [StatusViewModel]()
+    
     // MARK:- 系統調用函式
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,12 +95,32 @@ extension HomeViewController {
                 return
             }
             for statusDic in resultArray {
-                YULog(statusDic)
+                let status = Status(dic: statusDic)
+                let viewModel = StatusViewModel(status: status)
+                self.viewModels.append(viewModel)
             }
+            self.tableView.reloadData()
             
         }
     }
 }
 
+// MARK:- tableView Delegate DataSource
+extension HomeViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeViewCell
+        
+        let viewModel = viewModels[indexPath.row]
+        cell.viewModel = viewModel
+        
+        
+        return cell
+    }
+}
 
 

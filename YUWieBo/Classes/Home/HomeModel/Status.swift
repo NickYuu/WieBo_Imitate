@@ -13,9 +13,10 @@ class Status: NSObject {
     // MARK:- 屬性
     var created_at : String?              // 微博創建時間
     var source : String?                  // 微博來源
-    var text : String?                      // 微博的正文
-    var mid : Int = 0                       // 微博的ID
-    var user : User?
+    var text : String?                    // 微博的正文
+    var mid : Int = 0                     // 微博的ID
+    var user : User?                      // 用戶資訊
+    var pic_urls : [[String : String]]?   // 微博的配圖
     
     
     // 自定構造函式

@@ -21,7 +21,7 @@ class UserAccountViewModel {
     var accountPath : String {
         var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         accountPath += "/accout.plist"
-        YULog(accountPath)
+        // YULog(accountPath)
         return accountPath
     }
     
@@ -39,7 +39,7 @@ class UserAccountViewModel {
     
     // MARK:- 重寫init()
     init () {
-        // 1.从沙盒中读取中归档的信息
+        // 讀取歸檔的訊息
         account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount
     }
 }

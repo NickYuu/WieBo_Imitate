@@ -21,6 +21,7 @@
 		E71A1F081D82B13A00F2A520 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71A1F061D82B13A00F2A520 /* PopoverViewController.xib */; };
 		E71A1F0A1D82DBCF00F2A520 /* PopPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F091D82DBCF00F2A520 /* PopPresentationController.swift */; };
 		E71A1F0C1D8318D700F2A520 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A1F0B1D8318D700F2A520 /* PopoverAnimator.swift */; };
+		E72800361D96493B00453A19 /* PicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72800351D96493B00453A19 /* PicCollectionView.swift */; };
 		E74451A81D81C91000262063 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74451A61D81C91000262063 /* BaseViewController.swift */; };
 		E74451A91D81C91000262063 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74451A71D81C91000262063 /* VisitorView.swift */; };
 		E74451AB1D81C92900262063 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74451AA1D81C92900262063 /* VisitorView.xib */; };
@@ -65,6 +66,7 @@
 		E71A1F061D82B13A00F2A520 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		E71A1F091D82DBCF00F2A520 /* PopPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopPresentationController.swift; sourceTree = "<group>"; };
 		E71A1F0B1D8318D700F2A520 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
+		E72800351D96493B00453A19 /* PicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollectionView.swift; sourceTree = "<group>"; };
 		E74451A61D81C91000262063 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E74451A71D81C91000262063 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		E74451AA1D81C92900262063 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				E7EFB4B31D816F8200FC7FA7 /* Home.storyboard */,
 				E7AA1A081D815CDB006B5024 /* HomeViewController.swift */,
 				E714454D1D8EBEE500DB2635 /* HomeViewCell.swift */,
+				E72800351D96493B00453A19 /* PicCollectionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				E714454C1D8EB33C00DB2635 /* StatusViewModel.swift in Sources */,
 				E714454E1D8EBEE500DB2635 /* HomeViewCell.swift in Sources */,
 				E705AA4D1D8D560600506682 /* UserAccountViewModel.swift in Sources */,
+				E72800361D96493B00453A19 /* PicCollectionView.swift in Sources */,
 				E7AA1A091D815CDB006B5024 /* HomeViewController.swift in Sources */,
 				E74451A81D81C91000262063 /* BaseViewController.swift in Sources */,
 				E74451A91D81C91000262063 /* VisitorView.swift in Sources */,

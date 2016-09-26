@@ -17,7 +17,7 @@ class Status: NSObject {
     var mid : Int = 0                     // 微博的ID
     var user : User?                      // 用戶資訊
     var pic_urls : [[String : String]]?   // 微博的配圖
-    
+    var retweeted_status : Status?        // 轉發的微博
     
     // 自定構造函式
     init(dic:[String:Any]) {
@@ -27,6 +27,11 @@ class Status: NSObject {
         // 將用戶字典轉成模型
         if let userDict = dic["user"] as? [String : AnyObject] {
             user = User(dict: userDict)
+        }
+        
+        // 將轉發微博字典轉成模型
+        if let retweetedStatusDict = dic["retweeted_status"] as? [String : AnyObject] {
+            retweeted_status = Status(dic: retweetedStatusDict)
         }
     }
     

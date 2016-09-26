@@ -10,6 +10,14 @@ import UIKit
 
 class PicCollectionView: UICollectionView {
 
+    // MARK:- 屬性
+    var picUrls: [NSURL] = [NSURL]() {
+        didSet {
+            self.reloadData()
+        }
+    }
+    
+    // MARK:- 系統調用函式
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,15 +29,40 @@ class PicCollectionView: UICollectionView {
 // MARK:- collectionView  DataSource
 extension PicCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return picUrls.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "picCell", for: indexPath)
+        // 獲取cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "picCell", for: indexPath) as! PicCollectionViewCell
         
-        cell.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        // 設置cell數據
+        cell.picUrl = picUrls[indexPath.item]
         
         return cell
     }
 }
+
+class PicCollectionViewCell: UICollectionViewCell {
+    
+    // MARK:- 定義模型屬性
+    var picUrl : NSURL? {
+        didSet {
+            guard let picUrl = picUrl else {
+                return
+            }
+            
+            iconView.sd_setImage(with: picUrl as URL, placeholderImage: UIImage(named: "empty_picture"))
+        }
+    }
+    
+    // MARK:- 元件屬性
+    @IBOutlet weak var iconView: UIImageView!
+    
+    
+    
+}
+
+
+

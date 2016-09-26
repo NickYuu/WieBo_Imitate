@@ -23,11 +23,14 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var picView: PicCollectionView!
+    @IBOutlet weak var retweetedContentLabel: UILabel!
+    @IBOutlet weak var retweetedBGView: UIView!
     
     // MARK:- 約束的屬性
     @IBOutlet weak var contentLabelWCons: NSLayoutConstraint!
     @IBOutlet weak var picViewHCons: NSLayoutConstraint!
     @IBOutlet weak var picViewWCons: NSLayoutConstraint!
+    @IBOutlet weak var picViewBottomCons: NSLayoutConstraint!
 
     // MARK:- 自定的屬性
     var viewModel : StatusViewModel? {
@@ -64,6 +67,21 @@ class HomeViewCell: UITableViewCell {
             picViewHCons.constant = picViewSize.height
             picViewWCons.constant = picViewSize.width
             
+            // 將picUrl數據傳給picView
+            picView.picUrls = viewModel.picURLs
+            
+            // 轉發的正文
+            if viewModel.status?.retweeted_status != nil {
+                if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, let retweetedText = viewModel.status?.retweeted_status?.text {
+                    retweetedContentLabel.text = "@" + "\(screenName): " + retweetedText
+                    
+                    retweetedBGView.isHidden = false
+                }
+            } else {
+                retweetedContentLabel.text = nil
+                
+                retweetedBGView.isHidden = true
+            }
         }
     }
     
@@ -74,10 +92,6 @@ class HomeViewCell: UITableViewCell {
         // 設置內文的寬度
         contentLabelWCons.constant = UIScreen.main.bounds.width - 2 * edgeMargin
         
-        // 取出picView對應的layout
-        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
-        let imageViewHW = (UIScreen.main.bounds.width - edgeMargin*2 - itemMargin*2) / 3
-        layout.itemSize = CGSize(width: imageViewHW, height: imageViewHW)
     }
 
 }
@@ -87,11 +101,33 @@ extension HomeViewCell {
     fileprivate func calculatePicViewSize(count: Int) -> CGSize {
         // 沒有配圖
         if count == 0 {
+            picViewBottomCons.constant = 0
             return CGSize.zero
+        }
+        
+        // 有配圖添加約束
+        picViewBottomCons.constant = 8
+        
+        // 2.取出picView对应的layout
+        let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        // 一張配圖
+        if count == 1 {
+            // 取出圖片
+            let urlString = viewModel?.picURLs.last?.absoluteString
+            let image = SDWebImageManager.shared().imageCache.imageFromDiskCache(forKey: urlString)
+            
+            // 設置一張圖片時layout的itemSize
+            layout.itemSize = CGSize(width: image!.size.width * 2, height: image!.size.height * 2)
+            
+            return CGSize(width: image!.size.width * 2, height: image!.size.height * 2)
         }
         
         // 計算imageView的寬高
         let imageViewHW = (UIScreen.main.bounds.width - edgeMargin*2 - itemMargin*2) / 3
+        
+        // 設置其他張圖片時layout的itemSize
+        layout.itemSize = CGSize(width: imageViewHW, height: imageViewHW)
         
         // 四張配圖
         if count == 4 {

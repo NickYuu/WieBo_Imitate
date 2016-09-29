@@ -68,7 +68,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15D-Nz-dyP">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15D-Nz-dyP" userLabel="btmTool">
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMj-PD-pCo">
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,7 +167,7 @@
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="重要的東西肉眼是看不到的" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMl-Je-7Hq">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重要的東西肉眼是看不到的" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMl-Je-7Hq">
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -178,7 +178,6 @@
                                         <constraint firstItem="jLs-lY-4Qf" firstAttribute="trailing" secondItem="cMo-eD-6Ze" secondAttribute="trailing" id="5Q8-bU-8wq"/>
                                         <constraint firstAttribute="trailing" secondItem="15D-Nz-dyP" secondAttribute="trailing" id="5Uy-B4-GkM"/>
                                         <constraint firstItem="DRa-rr-DjA" firstAttribute="top" secondItem="NQP-bX-mJw" secondAttribute="bottom" constant="8" id="7ic-0q-2KP"/>
-                                        <constraint firstAttribute="bottom" secondItem="15D-Nz-dyP" secondAttribute="bottom" id="B6t-KL-uwx"/>
                                         <constraint firstItem="NQP-bX-mJw" firstAttribute="leading" secondItem="cMo-eD-6Ze" secondAttribute="leading" id="CHT-NZ-fny"/>
                                         <constraint firstItem="DRa-rr-DjA" firstAttribute="leading" secondItem="d5V-Bt-WkB" secondAttribute="leading" id="CS2-H8-jg5"/>
                                         <constraint firstItem="tTl-2i-7nT" firstAttribute="leading" secondItem="NUS-TJ-03k" secondAttribute="trailing" constant="10" id="Djg-X0-Fla"/>
@@ -213,6 +212,7 @@
                                     <outlet property="picViewWCons" destination="W4U-w1-aJW" id="wGr-gR-0Sg"/>
                                     <outlet property="retweetedBGView" destination="DRa-rr-DjA" id="3JV-67-u94"/>
                                     <outlet property="retweetedContentLabel" destination="AMl-Je-7Hq" id="E3A-ri-dMn"/>
+                                    <outlet property="retweetedContentLabelTopCons" destination="o3u-rZ-TJM" id="NUe-hm-C9s"/>
                                     <outlet property="screenName" destination="7Lc-W6-wTO" id="dy5-C8-zme"/>
                                     <outlet property="sourceLabel" destination="tTl-2i-7nT" id="ZOV-7T-y2i"/>
                                     <outlet property="timeLabel" destination="NUS-TJ-03k" id="elX-MZ-XTD"/>

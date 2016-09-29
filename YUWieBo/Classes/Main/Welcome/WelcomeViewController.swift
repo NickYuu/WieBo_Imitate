@@ -25,10 +25,19 @@ class WelcomeViewController: UIViewController {
         
         iconViewBottomCons.constant = UIScreen.main.bounds.height - 200
         
-        UIView.animate(withDuration: 1.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: [], animations: {
-            self.view.layoutIfNeeded()
-            }){ (_) in
-                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-            }
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        }) { (_) -> Void in
+            // 改成從Main.storyboard加載
+            UIApplication.shared.keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        }
+        
+    }
+    
 }

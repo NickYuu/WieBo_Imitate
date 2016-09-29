@@ -25,6 +25,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var picView: PicCollectionView!
     @IBOutlet weak var retweetedContentLabel: UILabel!
     @IBOutlet weak var retweetedBGView: UIView!
+    @IBOutlet weak var retweetedContentLabelTopCons: NSLayoutConstraint!
     
     // MARK:- 約束的屬性
     @IBOutlet weak var contentLabelWCons: NSLayoutConstraint!
@@ -75,12 +76,16 @@ class HomeViewCell: UITableViewCell {
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name, let retweetedText = viewModel.status?.retweeted_status?.text {
                     retweetedContentLabel.text = "@" + "\(screenName): " + retweetedText
                     
+                    retweetedContentLabelTopCons.constant = 15
+                    
                     retweetedBGView.isHidden = false
                 }
             } else {
                 retweetedContentLabel.text = nil
                 
                 retweetedBGView.isHidden = true
+                
+                retweetedContentLabelTopCons.constant = 0
             }
         }
     }

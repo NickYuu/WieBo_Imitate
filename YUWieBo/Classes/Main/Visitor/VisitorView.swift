@@ -19,7 +19,6 @@ class VisitorView: UIView {
     @IBOutlet weak var rotationView: UIImageView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
-    
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     

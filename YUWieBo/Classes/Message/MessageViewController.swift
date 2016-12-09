@@ -14,5 +14,6 @@ class MessageViewController: BaseViewController {
         super.viewDidLoad()
         visitorView.setupVisitorView("visitordiscover_image_message", tipText: "登入後..............")
     }
-
+    
+    
 }

@@ -14,7 +14,7 @@ class BaseViewController: UITableViewController {
     lazy var visitorView = VisitorView.createViewFromXib()
     
     // MARK:- 定義變量
-    var isLogin : Bool = UserAccountViewModel.shareIntance.isLogin
+    var isLogin: Bool = UserAccountViewModel.shareIntance.isLogin
     
     // MARK:- 系統回調函式
     override func loadView() {
@@ -58,7 +58,7 @@ extension BaseViewController {
         let oAuthVC = OAuthViewController()
         
         // 添加UINavigationController
-        let oAuthNav = UINavigationController(rootViewController: oAuthVC)
+        let oAuthNav = UINavigationController(rootViewController:  oAuthVC)
         
         // 彈出Controller
         present(oAuthNav, animated: true, completion: nil)

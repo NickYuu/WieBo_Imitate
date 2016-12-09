@@ -108,7 +108,7 @@ extension PopoverAnimator : UIViewControllerAnimatedTransitioning {
         // 執行動畫
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             dismissView?.transform = CGAffineTransform(scaleX: 1.0, y: 0.000001)
-        }) { (_) in
+        }) { _ in
             dismissView?.removeFromSuperview()
             transitionContext.completeTransition(true)
         }

@@ -49,18 +49,13 @@ class PicCollectionViewCell: UICollectionViewCell {
     // MARK:- 定義模型屬性
     var picUrl : NSURL? {
         didSet {
-            guard let picUrl = picUrl else {
-                return
-            }
-            
-            iconView.sd_setImage(with: picUrl as URL, placeholderImage: UIImage(named: "empty_picture"))
+            guard let picUrl = picUrl else { return }
+            iconView.sd_setImage(with: picUrl as URL, placeholderImage:  UIImage(named: "empty_picture"))
         }
     }
     
     // MARK:- 元件屬性
     @IBOutlet weak var iconView: UIImageView!
-    
-    
     
 }
 

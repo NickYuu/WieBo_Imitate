@@ -57,7 +57,7 @@ extension OAuthViewController {
     
     @objc fileprivate func fillItemClick() {
         // 撰寫JS
-        let jsCode = "document.getElementById('userId').value='00886926838881';document.getElementById('passwd').value='ws87542';"
+        let jsCode = "document.getElementById('userId').value='';document.getElementById('passwd').value='';"
         
         // webView執行JS
         webView.stringByEvaluatingJavaScript(from: jsCode)
@@ -146,7 +146,7 @@ extension OAuthViewController {
         NetworkTools.shareInstance.loadUserInfo(access_token: accessToken, uid: uid) { (result, error) -> () in
             
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
             

@@ -24,9 +24,10 @@ class HomeViewController: BaseViewController {
     // MARK:- 系統調用函式
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 沒有登入時
+        
         visitorView.addRotationAnim()
+        
+        // 沒有登入時
         if !isLogin{
             return
         }

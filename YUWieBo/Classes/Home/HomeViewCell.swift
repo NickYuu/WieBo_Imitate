@@ -96,7 +96,6 @@ class HomeViewCell: UITableViewCell {
         
         // 設置內文的寬度
         contentLabelWCons.constant = UIScreen.main.bounds.width - 2 * edgeMargin
-        
     }
 
 }
@@ -113,7 +112,7 @@ extension HomeViewCell {
         // 有配圖添加約束
         picViewBottomCons.constant = 8
         
-        // 2.取出picView对应的layout
+        // 2.取出picView的layout
         let layout = picView.collectionViewLayout as! UICollectionViewFlowLayout
         
         // 一張配圖

@@ -179,8 +179,8 @@
 		E74A0E791D8E147800FF4131 /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
-				E7C793AA1D8E300A00A93374 /* Status.swift */,
 				E71445491D8E792600DB2635 /* User.swift */,
+				E7C793AA1D8E300A00A93374 /* Status.swift */,
 				E714454B1D8EB33C00DB2635 /* StatusViewModel.swift */,
 			);
 			path = HomeModel;

@@ -29,17 +29,17 @@ extension Date {
         
         // 一分鐘內
         if interval < 60 {
-            return "刚刚"
+            return "剛剛"
         }
         
         // 幾分鐘前
         if interval < 60 * 60 {
-            return "\(interval / 60)分钟前"
+            return "\(interval / 60)分鐘前"
         }
         
         // 幾小時前
         if interval < 60 * 60 * 24 {
-            return "\(interval / (60 * 60))小时前"
+            return "\(interval / (60 * 60))小時前"
         }
         
         // 當前日曆
